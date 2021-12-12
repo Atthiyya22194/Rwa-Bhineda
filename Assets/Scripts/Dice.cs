@@ -38,11 +38,11 @@ public class Dice : MonoBehaviour
         if(whosTurn == 1)
         {
             GameControl.MovePlayer(1);
-        }else if(whosTurn == -1)
+        }/*else if(whosTurn == -1)
         {
             GameControl.MovePlayer(2);
         }
-        whosTurn *= -1;
+        whosTurn *= -1;*/
         coroutineAllowed = true;
     }
 }
