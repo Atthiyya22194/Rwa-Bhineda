@@ -103,4 +103,29 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    //---------------------------------------------button
+
+    //TestMoveDir can changed , it dpeneds on dir in MoveButton
+    public void OnButtonPress(GameObject dir)
+    {
+       if (dir.name == "up")
+       {
+            TestMoveDir = Vector2.up;
+       }
+       else if (dir.name == "down")
+       {
+            TestMoveDir = Vector2.down;
+       }
+       else if (dir.name == "right")
+       {
+            TestMoveDir = Vector2.right;
+       }
+       else if (dir.name == "left")
+       {
+            TestMoveDir = Vector2.left;
+       }
+        
+    }
+    //-----------------------------
 }
