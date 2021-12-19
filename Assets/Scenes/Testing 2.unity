@@ -400,7 +400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &190799508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3624,8 +3624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e8662185853bd4788e88fe6b9e5062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whoWinsTextShadow: {fileID: 0}
-  player1: {fileID: 0}
+  player: {fileID: 0}
 --- !u!4 &1748905376
 Transform:
   m_ObjectHideFlags: 0
@@ -3855,10 +3854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2612baa56f62b4e8ef56174556081c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _width: 7
-  _height: 7
-  _tilePrefab: {fileID: 6268694045075443469, guid: cd9ed2feeef29714589e923dcdd3af6f, type: 3}
-  _cam: {fileID: 1898892887}
 --- !u!4 &1868745612
 Transform:
   m_ObjectHideFlags: 0
@@ -4755,7 +4750,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0132c6d99fb1d4dbb7986528eeaae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoint: []
+  waypoint:
+  - {fileID: 293229150}
+  - {fileID: 2079764186}
+  - {fileID: 238892395}
+  - {fileID: 1875933129}
+  - {fileID: 526465282}
+  - {fileID: 907490046}
+  - {fileID: 1511780960}
+  - {fileID: 1057556444}
+  - {fileID: 1479342140}
+  - {fileID: 1704647245}
+  - {fileID: 239354406}
+  - {fileID: 1506775635}
+  - {fileID: 1428784260}
+  - {fileID: 2000842485}
+  - {fileID: 746484241}
+  - {fileID: 1016154139}
+  - {fileID: 9366129}
+  - {fileID: 156786690}
+  - {fileID: 1319981028}
+  - {fileID: 2083696693}
+  - {fileID: 448596498}
+  - {fileID: 1687358229}
+  - {fileID: 1975899250}
+  - {fileID: 1647073294}
+  - {fileID: 1748569170}
+  - {fileID: 618097445}
+  - {fileID: 258914616}
+  - {fileID: 442527073}
+  - {fileID: 1026782488}
+  - {fileID: 798150962}
+  - {fileID: 1365771578}
+  - {fileID: 1652715307}
+  - {fileID: 1998968486}
+  - {fileID: 163779574}
+  - {fileID: 74975835}
+  - {fileID: 2008456168}
+  - {fileID: 1312327555}
+  - {fileID: 229670859}
+  - {fileID: 502122435}
+  - {fileID: 166470624}
+  - {fileID: 1335190180}
+  - {fileID: 823823401}
+  - {fileID: 963622946}
+  - {fileID: 152423384}
+  - {fileID: 1067172150}
+  - {fileID: 801671137}
+  - {fileID: 1272899188}
+  - {fileID: 83957626}
+  - {fileID: 1559013893}
   boardSize: 7
   moveSpeed: 3
   waypointIndex: 0

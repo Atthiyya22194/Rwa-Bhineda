@@ -6,6 +6,7 @@ public class Trap : MonoBehaviour
 {
       void OnTriggerEnter2D(Collider2D coll)
     {
-       HealthBar.health -= 10f;
+       HealthBar.health -= 20;
+        Destroy(gameObject);
     }
 }
