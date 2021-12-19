@@ -4232,7 +4232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1392021326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5147,6 +5147,7 @@ GameObject:
   - component: {fileID: 1755496591}
   - component: {fileID: 1755496590}
   - component: {fileID: 1755496594}
+  - component: {fileID: 1755496595}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5258,6 +5259,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelPause: {fileID: 1818221850}
+--- !u!114 &1755496595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755496589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0eefa3ff614054429d280a3da68f06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 0}
+  coinText: {fileID: 0}
+  health: {fileID: 0}
+  coin: {fileID: 0}
 --- !u!1 &1756700064
 GameObject:
   m_ObjectHideFlags: 0
