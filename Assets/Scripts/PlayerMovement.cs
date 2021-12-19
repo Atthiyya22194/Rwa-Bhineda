@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowThePath : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     //board
     public Transform[] waypoint;
