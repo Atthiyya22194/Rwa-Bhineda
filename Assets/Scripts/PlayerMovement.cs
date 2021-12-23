@@ -116,24 +116,28 @@ public class PlayerMovement : MonoBehaviour
             MoveDir = Vector2.up;
             MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
+            Dice.EnableDice = true;
         }
        else if (dir.name == "down")
        {
             MoveDir = Vector2.down;
             MoveButton(MoveDir, GameControl.diceSideThrown); //Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
+            Dice.EnableDice = true;
         }
        else if (dir.name == "right")
        {
             MoveDir = Vector2.right;
             MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
+            Dice.EnableDice = true;
         }
        else if (dir.name == "left")
        {
             MoveDir = Vector2.left;
             MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
+            Dice.EnableDice = true;
         }
         
     }

@@ -8,6 +8,7 @@ public class Dice : MonoBehaviour
     private SpriteRenderer rend;
     private int whosTurn = 1;
     private bool coroutineAllowed = true;
+    public static bool EnableDice = true;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +20,12 @@ public class Dice : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!GameControl.gameOver && coroutineAllowed)
+        if (!GameControl.gameOver && coroutineAllowed && EnableDice)
             StartCoroutine("RollTheDice");
+        else if (!EnableDice)
+        {
+            Debug.Log("Tidak bisa mengacak dadu");
+        }
     }
 
     private IEnumerator RollTheDice()
@@ -44,5 +49,6 @@ public class Dice : MonoBehaviour
         }
         whosTurn *= -1;
         coroutineAllowed = true;
+        EnableDice = false;
     }
 }
