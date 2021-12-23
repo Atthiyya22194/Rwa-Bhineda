@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     //convert waypoint 1D ke 2D di void Start
     public Vector3[,] waypoints;
     public int boardSize = 7;
+    public Vector2 MoveDir;
     [SerializeField] private float moveSpeed = 1f;
     [HideInInspector] public int waypointIndex = 0;
     [SerializeField] private int waypointX = 0;
@@ -109,25 +110,30 @@ public class PlayerMovement : MonoBehaviour
     //TestMoveDir can changed , it dpeneds on dir in MoveButton
     public void OnButtonPress(GameObject dir)
     {
+       
        if (dir.name == "up")
        {
-            TestMoveDir = Vector2.up;
-            MoveButton(TestMoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+            MoveDir = Vector2.up;
+            MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+            GameControl.diceSideThrown = 0;
         }
        else if (dir.name == "down")
        {
-            TestMoveDir = Vector2.down;
-            MoveButton(TestMoveDir, GameControl.diceSideThrown); //Testing purpose only , if not important comment this
+            MoveDir = Vector2.down;
+            MoveButton(MoveDir, GameControl.diceSideThrown); //Testing purpose only , if not important comment this
+            GameControl.diceSideThrown = 0;
         }
        else if (dir.name == "right")
        {
-            TestMoveDir = Vector2.right;
-            MoveButton(TestMoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+            MoveDir = Vector2.right;
+            MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+            GameControl.diceSideThrown = 0;
         }
        else if (dir.name == "left")
        {
-            TestMoveDir = Vector2.left;
-            MoveButton(TestMoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+            MoveDir = Vector2.left;
+            MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+            GameControl.diceSideThrown = 0;
         }
         
     }
