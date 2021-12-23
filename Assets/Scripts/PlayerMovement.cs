@@ -112,19 +112,23 @@ public class PlayerMovement : MonoBehaviour
        if (dir.name == "up")
        {
             TestMoveDir = Vector2.up;
-       }
+            MoveButton(TestMoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+        }
        else if (dir.name == "down")
        {
             TestMoveDir = Vector2.down;
-       }
+            MoveButton(TestMoveDir, GameControl.diceSideThrown); //Testing purpose only , if not important comment this
+        }
        else if (dir.name == "right")
        {
             TestMoveDir = Vector2.right;
-       }
+            MoveButton(TestMoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+        }
        else if (dir.name == "left")
        {
             TestMoveDir = Vector2.left;
-       }
+            MoveButton(TestMoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+        }
         
     }
     //-----------------------------
