@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
+       /* Debug.Log(targetCounter);*/
+        /*Debug.Log(GameControl.diceSideThrown);*/
     }
 
 #if UNITY_EDITOR
@@ -74,19 +76,27 @@ public class PlayerMovement : MonoBehaviour
             if (nextX < 0)
             {
                 nextX = 0;
+                targetCounter = 0;
+                
             }
             //kalau nextX > boardSize-1, nextX dipaksa boardsize-1
             else if (nextX > boardSize - 1)
             {
                 nextX = boardSize - 1;
+                targetCounter = 0;
+
             }
             if (nextY < 0)
             {
                 nextY = 0;
+                targetCounter = 0;
+
             }
             else if (nextY > boardSize - 1)
             {
                 nextY = boardSize - 1;
+                targetCounter = 0;
+
             }
 
             Vector3 nextWaypoint = waypoints[nextX, nextY];
@@ -94,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
             //https://docs.unity3d.com/ScriptReference/Vector3.Equals.html
             //use the == operator to test two vectors for approximate equality.
-            if (transform.position == nextWaypoint)
+            if (transform.position == nextWaypoint && targetCounter != 0)
             {
                 //TODO: check tile effect
                 //waypointIndex += 1;
@@ -103,6 +113,11 @@ public class PlayerMovement : MonoBehaviour
                 targetCounter--;
             }
         }
+        /*if (targetCounter < 0)
+        {
+            targetCounter = 0;
+        }*/
+        
     }
 
     //---------------------------------------------button

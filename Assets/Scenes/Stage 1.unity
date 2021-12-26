@@ -579,6 +579,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1755496595}
+        m_TargetAssemblyTypeName: WinScreen, Assembly-CSharp
+        m_MethodName: ExitButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &143022274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3681,6 +3693,7 @@ GameObject:
   - component: {fileID: 1193920662}
   - component: {fileID: 1193920664}
   - component: {fileID: 1193920663}
+  - component: {fileID: 1193920665}
   m_Layer: 5
   m_Name: Coin
   m_TagString: Untagged
@@ -3749,6 +3762,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193920661}
   m_CullTransparentMesh: 1
+--- !u!114 &1193920665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193920661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c87e13a2bbb1442bdb10f532b03aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1193920663}
+  WinCanvas: {fileID: 1392021325}
+  MinCoin: 7
 --- !u!1 &1209676660
 GameObject:
   m_ObjectHideFlags: 0
@@ -4119,6 +4147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1328675791}
+  WinCanvas: {fileID: 1392021325}
+  MinCoin: 37
 --- !u!1 &1335190179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5272,9 +5302,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 0}
-  coinText: {fileID: 0}
-  health: {fileID: 0}
-  coin: {fileID: 0}
+  coinText: {fileID: 1328675791}
+  health: {fileID: 332701848}
+  coin: {fileID: 1328675793}
+  winCanvas: {fileID: 1392021325}
 --- !u!1 &1756700064
 GameObject:
   m_ObjectHideFlags: 0
