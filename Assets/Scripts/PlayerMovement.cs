@@ -17,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public bool moveAllowed = false;
     public Vector2 targetDir;
     public int targetCounter;
+    public Animator anim;
+    private bool moving;
+    private float x;
+    private float y;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoveAnimation();
         Move();
        /* Debug.Log(targetCounter);*/
         /*Debug.Log(GameControl.diceSideThrown);*/
@@ -120,12 +125,29 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    private void MoveAnimation()
+    {
+        if(MoveDir.magnitude > 0.1f || MoveDir.magnitude < -0.1f)
+        {
+            moving = true;
+        }
+        else
+        {
+            moving = false;
+        }
+        if (moving)
+        {
+            anim.SetFloat("X", x);
+            anim.SetFloat("Y", y);
+        }
+        anim.SetBool("Moving", moving);
+    }
+
     //---------------------------------------------button
 
     //TestMoveDir can changed , it dpeneds on dir in MoveButton
     public void OnButtonPress(GameObject dir)
     {
-       
        if (dir.name == "up")
        {
             MoveDir = Vector2.up;
