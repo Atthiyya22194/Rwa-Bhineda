@@ -5,26 +5,21 @@ using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip PlayerFiresound, getcoin;
-    static AudioSource audioSrc;
-
-    // Start is called before the first frame update
-    void Start()
+    public AudioSource sfxButton;
+    public AudioSource sfxHurt;
+    public AudioSource sfxPick;
+    public void PlayButton()
     {
-        PlayerFiresound = Resources.Load<AudioClip>("Playerhit");
-        getcoin = Resources.Load<AudioClip>("getcoin");
-
-        audioSrc = GetComponent<AudioSource>();
+        sfxButton.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayHurt()
     {
-
+        sfxHurt.Play();
     }
 
-    public static void PlaySound(string clip)
+    public void PlayPick()
     {
-        
+        sfxPick.Play();
     }
 }

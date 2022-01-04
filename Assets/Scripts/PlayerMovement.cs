@@ -18,9 +18,9 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 targetDir;
     public int targetCounter;
     public Animator anim;
-    private bool moving;
-    private float x;
-    private float y;
+    private float Moving;
+    private float Horizontal;
+    private float Vertical;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveAnimation();
         Move();
        /* Debug.Log(targetCounter);*/
         /*Debug.Log(GameControl.diceSideThrown);*/
@@ -123,24 +122,6 @@ public class PlayerMovement : MonoBehaviour
             targetCounter = 0;
         }*/
         
-    }
-
-    private void MoveAnimation()
-    {
-        if(MoveDir.magnitude > 0.1f || MoveDir.magnitude < -0.1f)
-        {
-            moving = true;
-        }
-        else
-        {
-            moving = false;
-        }
-        if (moving)
-        {
-            anim.SetFloat("X", x);
-            anim.SetFloat("Y", y);
-        }
-        anim.SetBool("Moving", moving);
     }
 
     //---------------------------------------------button
