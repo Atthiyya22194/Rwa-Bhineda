@@ -17,7 +17,6 @@ public class WinScreen : MonoBehaviour
     {
         health = FindObjectOfType<HealthBar>();
         coin = FindObjectOfType<Coins>();
-        
     }
 
     // Update is called once per frame
@@ -36,7 +35,5 @@ public class WinScreen : MonoBehaviour
     {
         winCanvas.SetActive(false);
         SceneManager.LoadScene("Main Menu");
-
-
     }
 }
