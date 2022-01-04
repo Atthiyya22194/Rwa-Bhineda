@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        SoundManager.PlaySound("Trap");
+
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
         if (Vector3.Distance(transform.position, movePoint.position) <= .05f)
         {

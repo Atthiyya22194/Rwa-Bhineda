@@ -25,9 +25,9 @@ public class Coins : MonoBehaviour
             WinScreen.WinPanel(true, WinCanvas);
         }
 
-        score = coinAmount;
+        /*score = coinAmount;
         PlayerPrefs.SetInt("score", score);
-        WinScreen.coinText.text = PlayerPrefs.GetInt("score").ToString();
+        WinScreen.coinText.text = PlayerPrefs.GetInt("score").ToString();*/
     }
 
 #if UNITY_EDITOR
