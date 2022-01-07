@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject PanelGameOver;
+    public int health = 100;
     //board
     public Transform[] waypoint;
     //convert waypoint 1D ke 2D di void Start
@@ -17,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public bool moveAllowed = false;
     public Vector2 targetDir;
     public int targetCounter;
-    public Animator anim;
+    private Animator anim;
     private float Moving;
     private float Horizontal;
     private float Vertical;
@@ -25,6 +27,14 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
+        PanelGameOver.SetActive(false);
+        if (health <= 0)
+        {
+            PanelGameOver.SetActive(true);
+            Time.timeScale = 0f;
+        }
+
         //uncomment this
         transform.position = waypoint[waypointIndex].transform.position;
         //itterate waypoint dan assign ke waypoints

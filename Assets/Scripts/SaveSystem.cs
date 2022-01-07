@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SaveSystem : MonoBehaviour
 {
+    //public string playerHealthKey = "PlayerHealth", sceneKey = 
     // Start is called before the first frame update
     void Start()
     {

@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-      void OnTriggerEnter2D(Collider2D coll)
+    private PlayerMovement health;
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-       HealthBar.health -= 20;
-        Destroy(gameObject);
+        if (other.name == "Player")
+        {
+            other.gameObject.GetComponent<PlayerMovement>().health -= 20;
+        }
+        //FindObjectOfType<SFXmanager>().PlayHurt();
     }
 }

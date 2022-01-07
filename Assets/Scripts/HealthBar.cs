@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
+    private PlayerMovement player;
     Image healthBar;
     int maxHealth = 100;
-    public static float health;
+    private float CurrentHealth;
+    public static int health;
 
     void Start()
     {
         healthBar = GetComponent<Image>();
+        player = FindObjectOfType<PlayerMovement>();
         health = maxHealth;
-        //maxHealth = PlayerPrefs.GetInt("health");
     }
     void Update()
     {
+        CurrentHealth = player.health;
         healthBar.fillAmount = health / maxHealth;
-        //PlayerPrefs.SetInt("health", maxHealth);
     }
 }
