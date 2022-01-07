@@ -1545,6 +1545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc4a403ca1102e409aad32c6c863161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelGameOver: {fileID: 2099048653}
+  currentHealth: 0
 --- !u!114 &332701849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7557,6 +7559,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3897792857761395031, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
+      propertyPath: PanelGameOver
+      value: 
+      objectReference: {fileID: 2099048653}
     - target: {fileID: 3897792857761395031, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
       propertyPath: waypoint.Array.data[0]
       value: 

@@ -10,7 +10,7 @@ public class Coins : MonoBehaviour
     public GameObject WinCanvas;
     public int MinCoin = 5;
     private int score;
-    [SerializeField] private WinScreen WinScreen;
+    [SerializeField] private WinScreen winScreen;
 
     void Start()
     {
@@ -26,9 +26,11 @@ public class Coins : MonoBehaviour
             WinScreen.WinPanel(true, WinCanvas);
         }
 
+        /*
         score = coinAmount;
         PlayerPrefs.SetInt("score", score);
-        WinScreen.coinText.text = PlayerPrefs.GetInt("score").ToString();
+        winScreen.coinText.text = PlayerPrefs.GetInt("score").ToString();
+        */
     }
 
 #if UNITY_EDITOR

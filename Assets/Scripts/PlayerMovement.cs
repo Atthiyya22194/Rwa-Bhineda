@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject PanelGameOver;
-    public int health = 100;
     //board
     public Transform[] waypoint;
     //convert waypoint 1D ke 2D di void Start
@@ -28,12 +26,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        PanelGameOver.SetActive(false);
-        if (health <= 0)
-        {
-            PanelGameOver.SetActive(true);
-            Time.timeScale = 0f;
-        }
 
         //uncomment this
         transform.position = waypoint[waypointIndex].transform.position;
@@ -52,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-       /* Debug.Log(targetCounter);*/
+        /*Debug.Log(targetCounter);*/
         /*Debug.Log(GameControl.diceSideThrown);*/
     }
 
