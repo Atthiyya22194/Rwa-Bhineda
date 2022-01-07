@@ -9,14 +9,15 @@ public class HealthBar : MonoBehaviour
     int maxHealth = 100;
     public static float health;
 
-
-        void Start()
+    void Start()
     {
         healthBar = GetComponent<Image>();
         health = maxHealth;
+        //maxHealth = PlayerPrefs.GetInt("health");
     }
-        void Update()
+    void Update()
     {
         healthBar.fillAmount = health / maxHealth;
+        //PlayerPrefs.SetInt("health", maxHealth);
     }
 }

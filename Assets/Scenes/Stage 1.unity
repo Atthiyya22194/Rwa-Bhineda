@@ -442,25 +442,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3897792857761395030, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
   m_PrefabInstance: {fileID: 3897792856500159298}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &116787603
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116787602}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 53d60af1108ef0a45b46ae5b308b776d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &116787605 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3897792857761395031, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
@@ -7576,7 +7557,7 @@ PrefabInstance:
     - target: {fileID: 3897792857761395031, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 116787603}
+      objectReference: {fileID: 0}
     - target: {fileID: 3897792857761395031, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
       propertyPath: waypoint.Array.data[0]
       value: 
