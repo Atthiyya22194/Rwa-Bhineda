@@ -1545,8 +1545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc4a403ca1102e409aad32c6c863161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanelGameOver: {fileID: 2099048653}
-  currentHealth: 0
 --- !u!114 &332701849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1725,7 +1723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 332701848}
 --- !u!212 &392093455
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1999,9 +1996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a73ad0377e642448fdc9e63a39fdbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxButton: {fileID: 0}
-  sfxHurt: {fileID: 0}
-  sfxPick: {fileID: 0}
+  sfxButton: {fileID: 1626121526}
 --- !u!82 &441267429
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2474,7 +2469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 332701848}
 --- !u!212 &493651919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3141,7 +3135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 332701848}
 --- !u!212 &759516744
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5068,7 +5061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 332701848}
 --- !u!212 &1593250131
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5161,7 +5153,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8dc218a080c99454c97fc14f1d0e195d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6590,7 +6582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 332701848}
 --- !u!212 &1942780176
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6733,7 +6724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 332701848}
 --- !u!212 &1978260386
 SpriteRenderer:
   m_ObjectHideFlags: 0
