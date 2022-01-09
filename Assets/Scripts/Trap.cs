@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    [SerializeField] private HealthBar health;
-
     void OnTriggerEnter2D(Collider2D coll)
     {
-       health.currentHealth -= 20;
-       Destroy(gameObject);
+        HealthBar.health -= 20;
+        Destroy(gameObject);
     }
 }

@@ -1725,6 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 332701848}
 --- !u!212 &392093455
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2473,6 +2474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 332701848}
 --- !u!212 &493651919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3139,6 +3141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 332701848}
 --- !u!212 &759516744
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3922,7 +3925,7 @@ MonoBehaviour:
   text: {fileID: 1193920663}
   WinCanvas: {fileID: 1392021325}
   MinCoin: 7
-  WinScreen: {fileID: 1755496595}
+  winScreen: {fileID: 0}
 --- !u!1 &1209676660
 GameObject:
   m_ObjectHideFlags: 0
@@ -4295,7 +4298,7 @@ MonoBehaviour:
   text: {fileID: 1328675791}
   WinCanvas: {fileID: 1392021325}
   MinCoin: 37
-  WinScreen: {fileID: 1755496595}
+  winScreen: {fileID: 0}
 --- !u!1 &1335190179
 GameObject:
   m_ObjectHideFlags: 0
@@ -5065,6 +5068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 332701848}
 --- !u!212 &1593250131
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6586,6 +6590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 332701848}
 --- !u!212 &1942780176
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6728,6 +6733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b68907c39f9ad49b68ff27bba7d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 332701848}
 --- !u!212 &1978260386
 SpriteRenderer:
   m_ObjectHideFlags: 0
