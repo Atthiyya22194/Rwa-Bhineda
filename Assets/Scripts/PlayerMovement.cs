@@ -22,11 +22,11 @@ public class PlayerMovement : MonoBehaviour
     private float Horizontal;
     private float Vertical;
 
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-
         //uncomment this
         transform.position = waypoint[waypointIndex].transform.position;
         //itterate waypoint dan assign ke waypoints

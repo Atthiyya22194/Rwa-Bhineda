@@ -8,14 +8,12 @@ public class Coins : MonoBehaviour
     public Text text;
     public static int coinAmount;
     public GameObject WinCanvas;
-    public int MinCoin = 5;
+    private int MinCoin = 2;
     private int score;
-    [SerializeField] private WinScreen winScreen;
 
     void Start()
     {
         text = GetComponent<Text>();
-        coinAmount = 2;
     }
     void Update()
     {
@@ -39,7 +37,7 @@ public class Coins : MonoBehaviour
     [ContextMenu("TestUnlockStage")]
     void TestUnlockStage()
     {
-        coinAmount = 38;
+        coinAmount = 3;
     }
 #endif
 
