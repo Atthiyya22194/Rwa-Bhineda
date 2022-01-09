@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-      void OnTriggerEnter2D(Collider2D coll)
+    void OnTriggerEnter2D(Collider2D coll)
     {
-       HealthBar.health -= 20;
-        Destroy(gameObject);
+        if(coll.name == "Player")
+        {
+            HealthBar.health -= 20;
+            Destroy(gameObject);
+        }
+        FindObjectOfType<SoundManager>().PlayButton();
     }
 }

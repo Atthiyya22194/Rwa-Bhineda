@@ -14,6 +14,8 @@ public class GameControl : MonoBehaviour
     {
         player = GameObject.Find("Player");
         player.GetComponent<PlayerMovement>().moveAllowed = false;
+        Coins.coinAmount = 0;
+        
     }
 
     // Update is called once per frame
@@ -46,4 +48,6 @@ public class GameControl : MonoBehaviour
                 break;
         }*/
     }
+
+    
 }

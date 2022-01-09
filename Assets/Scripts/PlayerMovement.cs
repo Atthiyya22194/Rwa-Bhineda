@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     //convert waypoint 1D ke 2D di void Start
     public Vector3[,] waypoints;
     public int boardSize = 7;
+    public Vector2 MoveDir;
     [SerializeField] private float moveSpeed = 1f;
     [HideInInspector] public int waypointIndex = 0;
     [SerializeField] private int waypointX = 0;
@@ -16,10 +17,16 @@ public class PlayerMovement : MonoBehaviour
     public bool moveAllowed = false;
     public Vector2 targetDir;
     public int targetCounter;
+    private Animator anim;
+    private float Moving;
+    private float Horizontal;
+    private float Vertical;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         //uncomment this
         transform.position = waypoint[waypointIndex].transform.position;
         //itterate waypoint dan assign ke waypoints
@@ -37,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
+        /*Debug.Log(targetCounter);*/
+        /*Debug.Log(GameControl.diceSideThrown);*/
     }
 
 #if UNITY_EDITOR
@@ -73,19 +82,27 @@ public class PlayerMovement : MonoBehaviour
             if (nextX < 0)
             {
                 nextX = 0;
+                targetCounter = 0;
+                
             }
             //kalau nextX > boardSize-1, nextX dipaksa boardsize-1
             else if (nextX > boardSize - 1)
             {
                 nextX = boardSize - 1;
+                targetCounter = 0;
+
             }
             if (nextY < 0)
             {
                 nextY = 0;
+                targetCounter = 0;
+
             }
             else if (nextY > boardSize - 1)
             {
                 nextY = boardSize - 1;
+                targetCounter = 0;
+
             }
 
             Vector3 nextWaypoint = waypoints[nextX, nextY];
@@ -93,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
             //https://docs.unity3d.com/ScriptReference/Vector3.Equals.html
             //use the == operator to test two vectors for approximate equality.
-            if (transform.position == nextWaypoint)
+            if (transform.position == nextWaypoint && targetCounter != 0)
             {
                 //TODO: check tile effect
                 //waypointIndex += 1;
@@ -102,6 +119,11 @@ public class PlayerMovement : MonoBehaviour
                 targetCounter--;
             }
         }
+        /*if (targetCounter < 0)
+        {
+            targetCounter = 0;
+        }*/
+        
     }
 
     //---------------------------------------------button
@@ -111,20 +133,32 @@ public class PlayerMovement : MonoBehaviour
     {
        if (dir.name == "up")
        {
-            TestMoveDir = Vector2.up;
-       }
+            MoveDir = Vector2.up;
+            MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+            GameControl.diceSideThrown = 0;
+            Dice.EnableDice = true;
+        }
        else if (dir.name == "down")
        {
-            TestMoveDir = Vector2.down;
-       }
+            MoveDir = Vector2.down;
+            MoveButton(MoveDir, GameControl.diceSideThrown); //Testing purpose only , if not important comment this
+            GameControl.diceSideThrown = 0;
+            Dice.EnableDice = true;
+        }
        else if (dir.name == "right")
        {
-            TestMoveDir = Vector2.right;
-       }
+            MoveDir = Vector2.right;
+            MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+            GameControl.diceSideThrown = 0;
+            Dice.EnableDice = true;
+        }
        else if (dir.name == "left")
        {
-            TestMoveDir = Vector2.left;
-       }
+            MoveDir = Vector2.left;
+            MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
+            GameControl.diceSideThrown = 0;
+            Dice.EnableDice = true;
+        }
         
     }
     //-----------------------------
