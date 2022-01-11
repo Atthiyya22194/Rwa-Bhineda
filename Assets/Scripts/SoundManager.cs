@@ -5,11 +5,17 @@ using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
+    public AudioSource bgSound;
     public AudioSource sfxButton;
     public AudioSource sfxTrap;
     public AudioSource sfxLose;
     public AudioSource sfxWin;
     public AudioSource sfxCoin;
+
+    private void Start()
+    {
+        bgSound.Play();
+    }
 
     public void PlayButton()
     {
