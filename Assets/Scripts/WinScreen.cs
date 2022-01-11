@@ -6,11 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
-    public Text healthText;
     public Text coinText;
     public HealthBar health;
     public Coins coin;
-    public GameObject winCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -25,15 +23,13 @@ public class WinScreen : MonoBehaviour
         
     }
 
-    public static void WinPanel(bool Active, GameObject WinCanvas)
+    public void NextStage()
     {
-        WinCanvas.SetActive(Active);
-        Dice.EnableDice = !Active;
+        SceneManager.LoadScene("Stage 2");
     }
 
     public void ExitButton()
     {
-        winCanvas.SetActive(false);
         SceneManager.LoadScene("Main Menu");
     }
 }

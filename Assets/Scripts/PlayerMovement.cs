@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public bool moveAllowed = false;
     public Vector2 targetDir;
     public int targetCounter;
-    private Animator anim;
+    public Animator anim;
 
 
     // Start is called before the first frame update
@@ -80,28 +80,23 @@ public class PlayerMovement : MonoBehaviour
             {
                 nextX = 0;
                 targetCounter = 0;
-                
             }
             //kalau nextX > boardSize-1, nextX dipaksa boardsize-1
             else if (nextX > boardSize - 1)
             {
                 nextX = boardSize - 1;
                 targetCounter = 0;
-
             }
             if (nextY < 0)
             {
                 nextY = 0;
                 targetCounter = 0;
-
             }
             else if (nextY > boardSize - 1)
             {
                 nextY = boardSize - 1;
                 targetCounter = 0;
-
             }
-
             Vector3 nextWaypoint = waypoints[nextX, nextY];
             transform.position = Vector3.MoveTowards(transform.position, nextWaypoint, moveSpeed * Time.deltaTime); //moveSpeed * Time.deltaTime is move distance 
 
@@ -131,6 +126,7 @@ public class PlayerMovement : MonoBehaviour
        if (dir.name == "up")
        {
             MoveDir = Vector2.up;
+            anim.SetFloat("Horizontal", MoveDir.y);
             MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
             Dice.EnableDice = true;
@@ -138,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
        else if (dir.name == "down")
        {
             MoveDir = Vector2.down;
+            anim.SetFloat("Horizontal", MoveDir.y);
             MoveButton(MoveDir, GameControl.diceSideThrown); //Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
             Dice.EnableDice = true;
@@ -145,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
        else if (dir.name == "right")
        {
             MoveDir = Vector2.right;
+            anim.SetFloat("Horizontal", MoveDir.x);
             MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
             Dice.EnableDice = true;
@@ -152,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
        else if (dir.name == "left")
        {
             MoveDir = Vector2.left;
+            anim.SetFloat("Horizontal", MoveDir.x);
             MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
             Dice.EnableDice = true;
