@@ -6,14 +6,33 @@ using UnityEngine.Audio;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource sfxButton;
-    public AudioSource tes;
+    public AudioSource sfxTrap;
+    public AudioSource sfxLose;
+    public AudioSource sfxWin;
+    public AudioSource sfxCoin;
 
     public void PlayButton()
     {
         sfxButton.Play();
     }
+
     public void Fire()
     {
-        sfxButton.Play();
+        sfxTrap.Play();
+    }
+
+    public void LoseScreen()
+    {
+        sfxLose.Play();
+    }
+
+    public void WinScreen()
+    {
+        sfxWin.Play();
+    }
+
+        public void GetCoin()
+    {
+        sfxCoin.Play();
     }
 }

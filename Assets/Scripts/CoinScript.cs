@@ -8,5 +8,6 @@ public class CoinScript : MonoBehaviour
     {
        Coins.coinAmount += 1; 
        Destroy(gameObject);
+       FindObjectOfType<SoundManager>().GetCoin();
     }
 }

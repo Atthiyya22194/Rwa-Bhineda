@@ -1,12 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class bgSound : MonoBehaviour
-{
-    public static bgSound music;
+{     
+    public AudioSource audio;
 
-    // Start is called before the first frame update
+    void Start()
+    {
+        audio.Play();
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+            audio.mute = !audio.mute;
+    }
+
+    /*
     private void Awake()
     {
         if (music != null && music != this)
@@ -17,4 +29,5 @@ public class bgSound : MonoBehaviour
         music = this;
         DontDestroyOnLoad(this);
     }
+    */
 }

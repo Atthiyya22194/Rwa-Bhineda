@@ -33,6 +33,7 @@ public class HealthBar : MonoBehaviour
         if (health == 0)
         {
             isPlayerDead = true;
+            FindObjectOfType<SoundManager>().LoseScreen();
             gameOver.SetActive(true);
         }
     }

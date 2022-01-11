@@ -8,7 +8,7 @@ public class Coins : MonoBehaviour
     public Text text;
     public static int coinAmount;
     public GameObject WinCanvas;
-    private int MinCoin = 0;
+    private int MinCoin = 37;
 
     void Start()
     {
@@ -21,6 +21,7 @@ public class Coins : MonoBehaviour
         text.text = coinAmount.ToString();
         if(coinAmount > MinCoin)
         {
+            FindObjectOfType<SoundManager>().WinScreen();
             WinCanvas.SetActive(true);
         }
 

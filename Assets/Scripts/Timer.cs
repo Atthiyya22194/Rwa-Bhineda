@@ -34,8 +34,8 @@ public class Timer : MonoBehaviour
             timeToDisplay = 0;
         }
 
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        float minutes = Mathf.FloorToInt(timeToDisplay / 30);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 30);
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }

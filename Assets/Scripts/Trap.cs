@@ -9,8 +9,8 @@ public class Trap : MonoBehaviour
         if(coll.name == "Player")
         {
             HealthBar.health -= 20;
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
-        FindObjectOfType<SoundManager>().PlayButton();
+        FindObjectOfType<SoundManager>().Fire();
     }
 }
