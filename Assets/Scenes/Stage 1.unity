@@ -6745,6 +6745,8 @@ MonoBehaviour:
   coinText: {fileID: 1328675791}
   health: {fileID: 332701848}
   coin: {fileID: 1328675793}
+  SceneDestination: Stage 2
+  SceneMode: single
 --- !u!114 &1755496596
 MonoBehaviour:
   m_ObjectHideFlags: 0
