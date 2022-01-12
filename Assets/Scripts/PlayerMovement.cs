@@ -18,12 +18,15 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 targetDir;
     public int targetCounter;
     public Animator anim;
+    public Rigidbody2D rb;
+    private bool isHurt, GetCoin;
 
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
         //uncomment this
         transform.position = waypoint[waypointIndex].transform.position;
         //itterate waypoint dan assign ke waypoints
@@ -41,8 +44,34 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        /*Debug.Log(targetCounter);*/
-        /*Debug.Log(GameControl.diceSideThrown);*/
+        HurtAnimation();
+        /*Debug.Log(targetCounter);
+        Debug.Log(GameControl.diceSideThrown);
+        anim.SetFloat("Horizontal", MoveDir.x);
+        anim.SetFloat("Vertical", MoveDir.y);
+        anim.SetFloat("Speed", moveSpeed);*/
+    }
+
+    public void GetCoinAnimation()
+    {
+        GetCoin = true;
+    }
+
+    public void HurtAnimation()
+    {
+        isHurt = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Trap"))
+        {
+            anim.SetTrigger("isHurt");
+        }
+        if (collision.CompareTag("Coin"))
+        {
+            anim.SetTrigger("GetCoin");
+        }
     }
 
 #if UNITY_EDITOR
@@ -126,7 +155,8 @@ public class PlayerMovement : MonoBehaviour
        if (dir.name == "up")
        {
             MoveDir = Vector2.up;
-            anim.SetFloat("Horizontal", MoveDir.y);
+            anim.SetFloat("Vertical", waypointY);
+            anim.enabled = true;
             MoveButton(MoveDir, GameControl.diceSideThrown);//Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
             Dice.EnableDice = true;
@@ -134,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
        else if (dir.name == "down")
        {
             MoveDir = Vector2.down;
-            anim.SetFloat("Horizontal", MoveDir.y);
+            anim.SetFloat("Vertical", MoveDir.y);
             MoveButton(MoveDir, GameControl.diceSideThrown); //Testing purpose only , if not important comment this
             GameControl.diceSideThrown = 0;
             Dice.EnableDice = true;

@@ -6,8 +6,9 @@ public class CoinScript : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D col)
     {
-       Coins.coinAmount += 1; 
-       Destroy(gameObject);
-       FindObjectOfType<SoundManager>().GetCoin();
+        Coins.coinAmount += 1; 
+        Destroy(gameObject);
+        FindObjectOfType<SoundManager>().GetCoin();
+        //PlayerMovement.FindObjectOfType<Animator>().Play("GetCoin");
     }
 }

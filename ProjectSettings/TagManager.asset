@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - health
+  - Trap
+  - Coin
   layers:
   - Default
   - TransparentFX
