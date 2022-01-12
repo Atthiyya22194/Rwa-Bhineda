@@ -5,13 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    bool hasSeenIntro;
+
+    private void Start()
+    {
+        hasSeenIntro = PlayerPrefs.GetInt("HasSeen") == 1 ? true : false;
+        Debug.Log(hasSeenIntro);
+    }
+
+    
+    
     public void PlayGame()
-    {      
-        SceneManager.LoadScene("Stage 1");
+    {
+        
+        /*SceneManager.LoadScene("Stage 1");*/
+        if (!hasSeenIntro )
+        {
+            TransitionScene.ChangeScene("CutsceneIntro", "single");
+            hasSeenIntro = true;
+        }
+        else if (hasSeenIntro == true)
+        {
+            TransitionScene.ChangeScene("Stage 1", "single");
+        }
+        
     }
         public void QuitGame()
     {
         Debug.Log("QUIT!");
         Application.Quit();
+    }
+
+    private void OnDisable()
+    {
+        PlayerPrefs.SetInt("HasSeen", hasSeenIntro ? 1 : 0);
+        PlayerPrefs.Save();
     }
 }
