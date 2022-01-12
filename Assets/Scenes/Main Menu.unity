@@ -1257,8 +1257,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 11500000, guid: 48a0ea2f96f33d54abadec07e24e7245, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+        m_MethodName: set_name
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

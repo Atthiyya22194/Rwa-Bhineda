@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
-    private float currentHealth;
     static public float health;
     Image healthBar;
     int maxHealth = 100;
@@ -47,6 +46,10 @@ public class HealthBar : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "Stage 2")
         {
             health = SaveSystem.GetFloat("health");
+        }
+        else if(SceneManager.GetActiveScene().name == "Stage 3")
+        {
+            health = maxHealth;
         }
     }
 }

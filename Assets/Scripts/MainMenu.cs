@@ -9,12 +9,11 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         hasSeenIntro = PlayerPrefs.GetInt("HasSeen") == 1 ? true : false;
         Debug.Log(hasSeenIntro);
     }
 
-    
-    
     public void PlayGame()
     {
         

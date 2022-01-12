@@ -8,7 +8,7 @@ public class Coins : MonoBehaviour
     public Text text;
     public static int coinAmount;
     public GameObject WinCanvas;
-    private int MinCoin = 37;
+    private int MinCoin = 1;
 
     void Start()
     {

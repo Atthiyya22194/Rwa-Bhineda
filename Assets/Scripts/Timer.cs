@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeValue = 180f; // 1 menit 30 detik stage1
+    public float timeValue = 180f; // 2 menit 30 detik
     public Text timeText;
     public GameObject GameOver;
 
@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
         else
         {
             timeValue = 0;
+            GameOver.SetActive(true);
         }
         DisplayTime(timeValue);
     }

@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public int targetCounter;
     public Animator anim;
     public Rigidbody2D rb;
-    private bool isHurt, GetCoin;
+    public bool isHurt, GetCoin;
 
 
     // Start is called before the first frame update

@@ -19,12 +19,6 @@ public class WinScreen : MonoBehaviour
         coin = FindObjectOfType<Coins>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void NextStage()
     {
         TransitionScene.ChangeScene(SceneDestination, SceneMode);
