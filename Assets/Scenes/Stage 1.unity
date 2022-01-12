@@ -879,16 +879,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1755496589}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2102620694}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: WalkRight
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2102620693}
@@ -1491,16 +1491,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1755496589}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2102620694}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: ResetTrigger
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: WalkLeft
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2102620693}
@@ -1567,7 +1567,7 @@ GameObject:
   - component: {fileID: 332701848}
   m_Layer: 5
   m_Name: HealthBar
-  m_TagString: health
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2175,16 +2175,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1755496589}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2102620694}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: WalkBottom
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2102620693}
@@ -3836,16 +3836,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1755496589}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2102620694}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: WalkUp
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2102620693}
@@ -8898,6 +8898,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0132c6d99fb1d4dbb7986528eeaae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2102620694 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4422626695955781510, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
+  m_PrefabInstance: {fileID: 4422626695986322965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2145635452
 GameObject:
   m_ObjectHideFlags: 0
@@ -9287,6 +9292,10 @@ PrefabInstance:
       objectReference: {fileID: 1559013893}
     - target: {fileID: 4422626695798844417, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422626695798844417, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4422626695798844418, guid: 1dc64efdb2c43774f80375104c7ff1b3, type: 3}
