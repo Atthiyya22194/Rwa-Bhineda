@@ -9,6 +9,8 @@ public class WinScreen : MonoBehaviour
     public Text coinText;
     public HealthBar health;
     public Coins coin;
+    public string SceneDestination;
+    public string SceneMode;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,7 @@ public class WinScreen : MonoBehaviour
 
     public void NextStage()
     {
-        SceneManager.LoadScene("Stage 2");
+        TransitionScene.ChangeScene(SceneDestination, SceneMode);
     }
 
     public void ExitButton()
