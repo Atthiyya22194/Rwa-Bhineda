@@ -25,7 +25,8 @@ public class MainMenu : MonoBehaviour
         }
         else if (hasSeenIntro == true)
         {
-            TransitionScene.ChangeScene("Stage 1", "single");
+            TransitionScene.ChangeScene("CutsceneIntro", "single");
+            CutsceneScript.canSkip = true;
         }
         
     }
