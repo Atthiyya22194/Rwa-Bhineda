@@ -15,14 +15,14 @@ public class BossHealth : MonoBehaviour
     {
         winScreen.SetActive(false);
         healthBar = GetComponent<Image>();
+        health = maxHealth;
         isBossDead = false;
     }
 
     void Update()
     {
         healthBar.fillAmount = health / maxHealth;
-        SaveSystem.SetFloat("health", health);
-        if (health == 0)
+        if (health <= 0)
         {
             isBossDead = true;
             FindObjectOfType<SoundManager>().LoseScreen();

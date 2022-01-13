@@ -6,11 +6,11 @@ public class Boss : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.name == "Boss")
+        if (coll.name == "Player")
         {
-            HealthBar.health -= 20;
+            BossHealth.health -= 20;
             //Destroy(gameObject);
         }
-        FindObjectOfType<SoundManager>().Fire();
+        FindObjectOfType<SoundManager>().BossHurt();
     }
 }

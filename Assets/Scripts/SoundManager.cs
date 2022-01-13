@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource sfxLose;
     public AudioSource sfxWin;
     public AudioSource sfxCoin;
+    public AudioSource sfxBoss;
 
     private void Start()
     {
@@ -40,5 +41,10 @@ public class SoundManager : MonoBehaviour
         public void GetCoin()
     {
         sfxCoin.Play();
+    }
+
+    public void BossHurt()
+    {
+        sfxBoss.Play();
     }
 }

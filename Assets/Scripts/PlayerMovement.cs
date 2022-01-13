@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetTrigger("isHurt");
         }
-        if (collision.CompareTag("Coin"))
+        else if(collision.CompareTag("Coin"))
         {
             anim.SetTrigger("GetCoin");
         }
