@@ -41,4 +41,14 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("HasSeen", hasSeenIntro ? 1 : 0);
         PlayerPrefs.Save();
     }
+
+    public void BackButton()
+    {
+        TransitionScene.ChangeScene("Main Menu", "single");
+    }
+    public void TutorialButton()
+    {
+        TransitionScene.ChangeScene("Tutorial", "single");
+    }
 }
+
