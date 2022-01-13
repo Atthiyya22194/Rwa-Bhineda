@@ -195,6 +195,7 @@ MonoBehaviour:
   sfxLose: {fileID: 0}
   sfxWin: {fileID: 0}
   sfxCoin: {fileID: 0}
+  sfxBoss: {fileID: 0}
 --- !u!4 &63750540
 Transform:
   m_ObjectHideFlags: 0
@@ -1045,7 +1046,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 740941537}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: TutorialButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
