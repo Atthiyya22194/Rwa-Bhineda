@@ -10,30 +10,40 @@ public class CutsceneScript : MonoBehaviour
     public string SceneDestination;
     public string modeScene;
     public static bool canSkip;
+    public string StateVideo;
     // Start is called before the first frame update
     void Start()
     {
         /*Video animasi diplay disini*/
-        vid.loopPointReached += CheckOver;
+        if (StateVideo == "Cutscene")
+        {
+            vid.loopPointReached += CheckOver;
+        }
+        
         
 
     }
 
     private void Update()
     {
-        if (canSkip == true)
+        if (StateVideo == "Cutscene")
         {
-            if (Input.GetMouseButtonDown(0))
+            if (canSkip == true)
             {
-                SkipVideo();
+                if (Input.GetMouseButtonDown(0))
+                {
+                    SkipVideo();
+                }
             }
+            
         }
-
-        ///Utnuk bisa skip scene pada testing
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SkipVideo();
         }
+
+        ///Utnuk bisa skip scene pada testing
+
         ///harap di dihapus apabila mau dipublish
     }
 

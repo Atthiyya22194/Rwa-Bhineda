@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vid: {fileID: 445871362}
-  SceneDestination: Stage 1
+  SceneDestination: Alert
   modeScene: single
   StateVideo: Cutscene
 --- !u!1 &525509521
@@ -601,7 +601,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cutscene Intro
+  m_Text: 'Cutscene FInal
 
 '
 --- !u!222 &1585910753

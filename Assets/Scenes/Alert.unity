@@ -149,7 +149,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445871361}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 4971655e9d8e5da4ab542877900d311f, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 24680d0c905db334995bae70162699cd, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 525509523}
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vid: {fileID: 445871362}
-  SceneDestination: Stage 1
+  SceneDestination: Stage 3
   modeScene: single
   StateVideo: Cutscene
 --- !u!1 &525509521
@@ -601,7 +601,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cutscene Intro
+  m_Text: '
 
 '
 --- !u!222 &1585910753

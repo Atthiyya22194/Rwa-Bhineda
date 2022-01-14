@@ -28,4 +28,14 @@ public class WinScreen : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
+
+#if UNITY_EDITOR
+    //this code block only compiled on unity editor, wont be taken on build
+
+    [ContextMenu("TestUnlockStage")]
+    void TestUnlockStage()
+    {
+        NextStage();
+    }
+#endif
 }

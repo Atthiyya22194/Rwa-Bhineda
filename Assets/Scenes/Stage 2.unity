@@ -2740,7 +2740,7 @@ MonoBehaviour:
   coinText: {fileID: 416791450}
   health: {fileID: 1125333832}
   coin: {fileID: 416791447}
-  SceneDestination: Stage 3
+  SceneDestination: Cutscene Final
   SceneMode: single
 --- !u!114 &669341795
 MonoBehaviour:
